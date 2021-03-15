@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 
 class DailyForecast extends Component {
+    constructor (props){
+      super(props);
+      this.state = {
+        temperature: 15
+      };
 
+    }
+    componentDidMount(){
+      this.setState({
+        temperature: 10
+      });
+    }
 // add state to constructor and then set state when receiving api in when component mounts
     render() {
       return (
@@ -11,7 +22,7 @@ class DailyForecast extends Component {
                <th>{this.props.day}</th> 
             </tr>
             <tr>
-               <td>76 degrees</td> 
+               <td>{this.state.temperature}</td> 
             </tr>
 
           </table>
