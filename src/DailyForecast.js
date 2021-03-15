@@ -8,12 +8,17 @@ class DailyForecast extends Component {
       };
 
     }
+
     componentDidMount(){
-      this.setState({
-        temperature: 10
-      });
+      fetch('https://randomuser.me/api')
+        .then(res=>res.json())
+        .then(data=>{
+          this.setState({
+            temperature: data.results[0].gender
+          });
+        });
     }
-// add state to constructor and then set state when receiving api in when component mounts
+
     render() {
       return (
         <div>
