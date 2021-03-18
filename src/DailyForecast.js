@@ -5,6 +5,7 @@ class DailyForecast extends Component {
       super(props);
       this.state = {
         temperature: 15
+        
       };
 
     }
@@ -28,6 +29,8 @@ class DailyForecast extends Component {
             </tr>
             <tr>
                <td>{this.state.temperature}</td> 
+               <td>{this.props.lat}</td> 
+               <td>{this.props.long}</td> 
             </tr>
 
           </table>

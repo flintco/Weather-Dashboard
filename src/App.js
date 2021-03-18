@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <DailyForecast day="Monday"></DailyForecast>
+        <DailyForecast day="Madison, WI" lat="43.07" long="-89.38"></DailyForecast>
         <DailyForecast day="Tuesday"></DailyForecast>
         <DailyForecast day="Wednesday"></DailyForecast>
         <DailyForecast day="Thursday"></DailyForecast>
