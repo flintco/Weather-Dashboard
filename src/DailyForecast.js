@@ -4,14 +4,13 @@ class DailyForecast extends Component {
     constructor (props){
       super(props);
       this.state = {
-        temperature: 15,
-        apiCall: 'https://api.openweathermap.org/data/2.5/weather?lat=43.07' + '&lon=-89.38&appid=48d41b2d7115ee18536bc93db9915079'
+        temperature: ""
       };
-
     }
 
     componentDidMount(){
-      fetch(this.state.apiCall)
+      var apiCall = 'https://api.openweathermap.org/data/2.5/weather?lat=' + this.props.lat + '&lon=' + this.props.long + '&appid=48d41b2d7115ee18536bc93db9915079'
+      fetch(apiCall)
         .then(res=>res.json())
         .then(data=>{
           this.setState({
