@@ -25,7 +25,7 @@ class DailyForecast extends Component {
         <div>
           <table>
             <tr>
-               <th>{this.props.day}</th> 
+               <th>{this.props.location}</th> 
             </tr>
             <tr>
                <td>{this.state.temperature}</td> 
