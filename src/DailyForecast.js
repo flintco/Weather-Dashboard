@@ -20,11 +20,17 @@ class DailyForecast extends Component {
     }
 
     render() {
+      const ForecastStyles = {
+        backgroundColor: "lightBlue",
+        width: "250px",
+        height: "300px",
+        float: "left"
+      };
       return (
-        <div>
+        <div style={ForecastStyles}>
           <table>
             <tr>
-               <th>{this.props.location}</th> 
+               <th style={{color: "purple"}}>{this.props.location}</th> 
             </tr>
             <tr>
                <td>{this.state.temperature}</td> 
