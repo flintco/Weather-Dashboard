@@ -28,14 +28,18 @@ class DailyForecast extends Component {
       };
       return (
         <div style={ForecastStyles}>
-          <table>
+          <table style={{width: "100%"}}>
             <tr>
                <th style={{color: "purple"}}>{this.props.location}</th> 
             </tr>
             <tr>
                <td>{this.state.temperature}</td> 
-               <td>{this.props.lat}</td> 
-               <td>{this.props.long}</td> 
+            </tr>
+            <tr>
+              <td>{this.props.lat}</td> 
+            </tr>
+            <tr>
+              <td>{this.props.long}</td> 
             </tr>
 
           </table>
