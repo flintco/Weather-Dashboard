@@ -30,6 +30,7 @@ class DailyForecast extends Component {
         <div style={ForecastStyles}>
           <table style={{width: "100%"}}>
             <tr>
+                {/* Add text with the inputs*/}
                <th style={{color: "purple"}}>{this.props.location}</th> 
             </tr>
             <tr>
@@ -43,6 +44,8 @@ class DailyForecast extends Component {
             </tr>
 
           </table>
+
+          <p>This is a test</p>
 
         </div>        
       );
