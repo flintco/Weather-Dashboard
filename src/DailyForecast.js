@@ -24,26 +24,18 @@ class DailyForecast extends Component {
         backgroundColor: "lightBlue",
         width: "250px",
         height: "300px",
-        float: "left"
+        float: "left",
+        marginLeft: "3%",
+        marginTop: "10px",
+        marginBottom: "10px"
       };
       return (
-        <div style={ForecastStyles}>
-          <table style={{width: "100%"}}>
-            <tr>
-                {/* Add text with the inputs*/}
-               <th style={{color: "purple"}}>{this.props.location}</th> 
-            </tr>
-            <tr>
-               <td>{this.state.temperature}</td> 
-            </tr>
-            <tr>
-              <td>{this.props.lat}</td> 
-            </tr>
-            <tr>
-              <td>{this.props.long}</td> 
-            </tr>
-
-          </table>
+        <div style={ForecastStyles}> 
+          {/*Add text with the inputs*/}
+          <h2 style={{color: "purple"}}>{this.props.location}</h2> 
+          <p>{this.state.temperature + '\u00b0' + 'F'}</p>
+          <p>{this.props.lat}</p>
+          <p>{this.props.long}</p>
 
           <p>This is a test</p>
 
