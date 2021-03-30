@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ConditionalImage from './ConditionalImage';
 
 class DailyForecast extends Component {
     constructor (props){
@@ -36,10 +37,7 @@ class DailyForecast extends Component {
           <p>{this.state.temperature + '\u00b0' + 'F'}</p>
           <p>{this.props.lat}</p>
           <p>{this.props.long}</p>
-          <p>Replace with Immage Component</p>
-
-          <p>This is a test</p>
-
+          <ConditionalImage weather="snow"></ConditionalImage>
         </div>        
       );
     }
