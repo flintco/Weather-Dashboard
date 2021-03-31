@@ -5,7 +5,8 @@ class DailyForecast extends Component {
     constructor (props){
       super(props);
       this.state = {
-        temperature: ""
+        temperature: "",
+        weather: ""
       };
     }
 
@@ -15,7 +16,8 @@ class DailyForecast extends Component {
         .then(res=>res.json())
         .then(data=>{
           this.setState({
-            temperature: ((9 * (data.main.temp - 273) / 5) + 32).toFixed(0)
+            temperature: ((9 * (data.main.temp - 273) / 5) + 32).toFixed(0),
+            weather: data.weather[0].description
           });
         });
     }
@@ -35,8 +37,7 @@ class DailyForecast extends Component {
           {/*Add text with the inputs*/}
           <h2 style={{color: "purple"}}>{this.props.location}</h2> 
           <p>{this.state.temperature + '\u00b0' + 'F'}</p>
-          <p>{this.props.lat}</p>
-          <p>{this.props.long}</p>
+          <p>{this.state.weather}</p>
           <ConditionalImage weather="snow"></ConditionalImage>
         </div>        
       );
