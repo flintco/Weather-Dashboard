@@ -41,13 +41,28 @@ class DailyForecast extends Component {
       if (weatherRecieved.includes("scattered clouds")){
         weatherInput = "partlycloudy"
       }
+      //Capitalizes this.state.weather
+      var nextUpper = false
+      var capitalized = this.state.weather.charAt(0).toUpperCase()
+      for (var i=1; i < this.state.weather.length; i++){
+        if (nextUpper === false){
+          capitalized = capitalized + this.state.weather.charAt(i)
+          if (this.state.weather.charAt(i) === " "){
+            nextUpper = true
+          }
+        } else {
+          capitalized = capitalized + this.state.weather.charAt(i).toUpperCase()
+          nextUpper = false
+        }
+      }
+
       return (
         <div style={ForecastStyles}> 
           {/*Add text with the inputs*/}
           <h2 style={{color: "purple"}}>{this.props.location}</h2> 
           <p>{this.state.temperature + '\u00b0' + 'F'}</p>
-          <p>{this.state.weather}</p>
           <ConditionalImage weather={weatherInput}></ConditionalImage>
+          <p>{capitalized}</p>
         </div>        
       );
     }
