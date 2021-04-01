@@ -32,13 +32,22 @@ class DailyForecast extends Component {
         marginTop: "10px",
         marginBottom: "10px"
       };
+      //Handles weather inputs
+      var weatherInput = "cloudy"
+      var weatherRecieved = this.state.weather
+      if (weatherRecieved.includes("clear sky") || weatherRecieved.includes("few clouds")){
+          weatherInput = "sun"
+      }
+      if (weatherRecieved.includes("scattered clouds")){
+        weatherInput = "partlycloudy"
+      }
       return (
         <div style={ForecastStyles}> 
           {/*Add text with the inputs*/}
           <h2 style={{color: "purple"}}>{this.props.location}</h2> 
           <p>{this.state.temperature + '\u00b0' + 'F'}</p>
           <p>{this.state.weather}</p>
-          <ConditionalImage weather="snow"></ConditionalImage>
+          <ConditionalImage weather={weatherInput}></ConditionalImage>
         </div>        
       );
     }
