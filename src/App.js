@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div id="Header">Midwest Weather</div>
+        <div id="Header">Weather Dashboard</div>
         <div id="Main">
           <DailyForecast location="Madison, WI" lat="43.07" long="-89.38"></DailyForecast>
           <DailyForecast location="Chicago, IL" lat="41.88" long="-87.62"></DailyForecast>
