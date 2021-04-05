@@ -38,7 +38,7 @@ class DailyForecast extends Component {
       if (weatherRecieved.includes("clear sky") || weatherRecieved.includes("few clouds")){
           weatherInput = "sun"
       }
-      if (weatherRecieved.includes("scattered clouds")){
+      if (weatherRecieved.includes("scattered clouds") || weatherRecieved.includes("broken clouds")){
         weatherInput = "partlycloudy"
       }
       //Capitalizes this.state.weather
