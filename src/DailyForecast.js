@@ -41,6 +41,9 @@ class DailyForecast extends Component {
       if (weatherRecieved.includes("scattered clouds") || weatherRecieved.includes("broken clouds")){
         weatherInput = "partlycloudy"
       }
+      if (weatherRecieved.includes("overcast clouds")){
+        weatherInput = "cloudy"
+      }
       //Capitalizes this.state.weather
       var nextUpper = false
       var capitalized = this.state.weather.charAt(0).toUpperCase()
