@@ -42,8 +42,11 @@ class DailyForecast extends Component {
       if (weatherRecieved.includes("scattered clouds") || weatherRecieved.includes("broken clouds")){
         weatherInput = "partlycloudy"
       }
-      if (weatherRecieved.includes("overcast clouds")){
+      if (weatherRecieved.includes("overcast clouds") || weatherRecieved.includes("mist")){
         weatherInput = "cloudy"
+      }
+      if (weatherRecieved.includes("moderate rain") || weatherRecieved.includes("light rain")){
+        weatherInput = "rainy"
       }
       //Capitalizes this.state.weather
       var nextUpper = false
