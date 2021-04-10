@@ -13,67 +13,42 @@
 #Main {
   width: 100%;
   background-color: orange;
-  height: 650px;
+  height: 640px;
 }
 
 #HorizontalAlign {
   background-color: orange;
-  width: 85%;
-  margin-left: 10%;
-  height: 650px;
-}
-
-/*Screen goes to 1358px width */
-@media only screen and (max-width: 1358px) {
-  #Main {
-    background-color: orange;
-    height: 970px;
-  }
-
-  #HorizontalAlign {
-    background-color: orange;
-    margin-left: 12%;
-    height: 970px;
-  }
-}
-
-/*Screen goes to 938px width */
-@media only screen and (max-width: 938px) {
-  #Main {
-    background-color: orange;
-    height: 1280px;
-  }
-
-  #HorizontalAlign {
-    background-color: orange;
-    height: 1280px;
-  }
-}
-
-/*Screen goes to 615px width */
-@media only screen and (max-width: 615px) {
-  #Main {
-    background-color: orange;
-    height: 1280px;
-  }
-
-  #HorizontalAlign {
-    background-color: orange;
-    width: 96%;
-    margin-left: 2%;
-    height: 1280px;
-  }
-}
-
-#Footer {
-  width: 100%;
-  background-color: blue;
-  height: 400px;
-}
-
-#FootCenter {
+  width: 1080px;
   margin: auto;
-  width: 540px;
-  height: 300px;
-  background-color: green;
+  height: 640px;
+}
+
+@media only screen and (max-width: 1080px) {
+  #HorizontalAlign {
+    width: 810px;
+    height: 960px;
+  }
+  #Main {
+    height: 960px;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  #HorizontalAlign {
+    width: 540px;
+    height: 1280px;
+  }
+  #Main {
+    height: 1280px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #HorizontalAlign {
+    width: 270px;
+    height: 1600px;
+  }
+  #Main {
+    height: 1600px;
+  }
 }

@@ -20,12 +20,6 @@ class App extends Component {
           <DailyForecast location="Omaha, NE" lat="41.26" long="-95.94"></DailyForecast>
           </div>
         </div>
-        <div id="Footer">
-            <div id="FootCenter">
-              <DailyForecast location="Minneapolis, MN" lat="44.98" long="-93.27"></DailyForecast>
-              <DailyForecast location="Omaha, NE" lat="41.26" long="-95.94"></DailyForecast>
-            </div>
-        </div>
       </div>
     );
 }
