@@ -64,3 +64,16 @@
     height: 1280px;
   }
 }
+
+#Footer {
+  width: 100%;
+  background-color: blue;
+  height: 400px;
+}
+
+#FootCenter {
+  margin: auto;
+  width: 540px;
+  height: 300px;
+  background-color: green;
+}

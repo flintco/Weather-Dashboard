@@ -28,8 +28,8 @@ class DailyForecast extends Component {
         width: "250px",
         height: "300px",
         float: "left",
-        marginLeft: "1%",
-        marginRight: "1%",
+        marginLeft: "10px",
+        marginRight: "10px",
         marginTop: "10px",
         marginBottom: "10px"
       };
