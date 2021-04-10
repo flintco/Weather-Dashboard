@@ -31,7 +31,9 @@ class DailyForecast extends Component {
         marginLeft: "10px",
         marginRight: "10px",
         marginTop: "10px",
-        marginBottom: "10px"
+        marginBottom: "10px",
+        borderWidth: "2px",
+        borderStyle: "solid"
       };
       //Handles weather inputs
       var weatherInput = "cloudy"

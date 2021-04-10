@@ -13,42 +13,42 @@
 #Main {
   width: 100%;
   background-color: orange;
-  height: 640px;
+  height: 648px;
 }
 
 #HorizontalAlign {
   background-color: orange;
-  width: 1080px;
+  width: 1096px;
   margin: auto;
-  height: 640px;
+  height: 648px;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1096px) {
   #HorizontalAlign {
-    width: 810px;
-    height: 960px;
+    width: 822px;
+    height: 972px;
   }
   #Main {
-    height: 960px;
-  }
-}
-
-@media only screen and (max-width: 810px) {
-  #HorizontalAlign {
-    width: 540px;
-    height: 1280px;
-  }
-  #Main {
-    height: 1280px;
+    height: 972px;
   }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 822px) {
   #HorizontalAlign {
-    width: 270px;
-    height: 1600px;
+    width: 548px;
+    height: 1296px;
   }
   #Main {
-    height: 1600px;
+    height: 1296px;
+  }
+}
+
+@media only screen and (max-width: 548px) {
+  #HorizontalAlign {
+    width: 272px;
+    height: 1664px;
+  }
+  #Main {
+    height: 1664px;
   }
 }
