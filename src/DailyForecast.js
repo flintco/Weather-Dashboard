@@ -47,7 +47,7 @@ class DailyForecast extends Component {
       if (weatherRecieved.includes("overcast clouds") || weatherRecieved.includes("mist")){
         weatherInput = "cloudy"
       }
-      if (weatherRecieved.includes("moderate rain") || weatherRecieved.includes("light rain")){
+      if (weatherRecieved.includes("moderate rain") || weatherRecieved.includes("light rain") || weatherRecieved.includes("light intensity drizzle")){
         weatherInput = "rainy"
       }
       //Capitalizes this.state.weather
@@ -68,7 +68,7 @@ class DailyForecast extends Component {
       return (
         <div style={ForecastStyles}> 
           {/*Add text with the inputs*/}
-          <h2 style={{color: "purple"}}>{this.props.location}</h2> 
+          <h2 style={{color: "black"}}>{this.props.location}</h2> 
           <p>{this.state.temperature + '\u00b0' + 'F'}</p>
           <ConditionalImage weather={weatherInput}></ConditionalImage>
           <p>{capitalized}</p>
